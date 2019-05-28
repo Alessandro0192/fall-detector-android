@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:inputType="text"
+        android:key="pref_user_name"
+        android:summary="Enter your name"
+        android:textColorHint="@color/highlighted_text_material_light"
+        android:title="Name" />
+
+    <EditTextPreference
+        android:defaultValue="Fall detector application has detected a fall"
+        android:dialogTitle="Type message text"
+        android:inputType="textMultiLine"
+        android:key="pref_emergency_text"
+        android:summary="Enter a custom emergency message"
+        android:title="Emergency message text" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_location_enabled"
+        android:summary="Get the user's location(GPS enable required)"
+        android:title="GPS user's location" />
+
+    <RingtonePreference
+        android:key="pref_alarm_ringtone"
+        android:ringtoneType="ringtone|alarm"
+        android:showDefault="true"
+        android:showSilent="false"
+        android:summary="Select a ringtone for the fall alarm"
+        android:title="Alarm Ringtone" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_vibration"
+        android:title="Alarm vibration" />
+    <ListPreference
+        android:dialogTitle="Time to dismiss"
+        android:entries="@array/listArray"
+        android:entryValues="@array/listValue"
+        android:key="pref_alarm_timer"
+        android:summary="Select time to dismiss the alarm"
+        android:title="Alarm timer" />
+
+</PreferenceScreen>
